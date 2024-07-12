@@ -1,0 +1,25 @@
+const decrement = document.getElementById("decrement");
+const increment = document.getElementById("increment");
+const value = document.getElementById("value");
+const reset = document.getElementById("reset");
+
+let count =0;
+
+function updatecount(){
+    value.textContent = count;
+}
+
+decrement.addEventListener("click",function(){
+    count--;
+    updatecount();
+});
+
+increment.addEventListener("click", function(){
+    count++;
+    updatecount();
+});
+
+reset.addEventListener("click", function(){
+    count=0;
+    updatecount();
+})
